@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.46.0"],\
             ["eslint-plugin-react-hooks", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.4.3"],\
+            ["lucide-react", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.263.1"],\
             ["postcss", "npm:8.4.27"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:18.2.0"],\
@@ -1434,6 +1435,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.46.0"],\
             ["eslint-plugin-react-hooks", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:4.6.0"],\
             ["eslint-plugin-react-refresh", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.4.3"],\
+            ["lucide-react", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.263.1"],\
             ["postcss", "npm:8.4.27"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:18.2.0"],\
@@ -2734,6 +2736,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lru-cache-npm-7.18.3-e68be5b11c-e550d77238.zip/node_modules/lru-cache/",\
           "packageDependencies": [\
             ["lru-cache", "npm:7.18.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lucide-react", [\
+        ["npm:0.263.1", {\
+          "packageLocation": "./.yarn/cache/lucide-react-npm-0.263.1-4b8659db95-0648569855.zip/node_modules/lucide-react/",\
+          "packageDependencies": [\
+            ["lucide-react", "npm:0.263.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.263.1", {\
+          "packageLocation": "./.yarn/__virtual__/lucide-react-virtual-d80da778e7/0/cache/lucide-react-npm-0.263.1-4b8659db95-0648569855.zip/node_modules/lucide-react/",\
+          "packageDependencies": [\
+            ["lucide-react", "virtual:bef53c8789b06339c78d0351455b18de3cabd3943a8c8a1d5123c18a0bb01876f2d91886d6770374198bbb3a57e255ec85154c5bf3ab7b73ed4ac02200b38068#npm:0.263.1"],\
+            ["@types/react", "npm:18.2.18"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
