@@ -33,7 +33,7 @@ const Dropdown: FC<IDropdownProps> = ({ title, to, subLabel }) => {
       </Link>
       <div
         id="dropdown"
-        className={`transition-opacity ease-in-out delay-100 absolute pt-6 bg-white tracking-widest font-medium text-xs text-neutral-600 h-[450px] border-b-[1px] w-[100vw] left-0 px-[22rem] flex justify-between ${
+        className={`transition-opacity ease-in-out delay-100 absolute pt-6 bg-white tracking-widest font-medium text-xs text-neutral-600 h-[450px] border-b-[1px] w-full left-0 px-[22rem] flex justify-between ${
           isDropDownOpen ? "top-20" : "top-[-100%]"
         }`}
       >
