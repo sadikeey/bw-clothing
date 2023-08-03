@@ -27,7 +27,7 @@ const Navbar: FC = () => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false)
 
   return (
-    <header className='flex flex-col items-center justify-center border-b-[1px] border-[#DDDDDD]'>
+    <header className='flex flex-col items-center justify-center border-b-[1px] border-[#DDDDDD] bg-white'>
       <nav className='h-12 flex xl:w-container justify-between items-center'>
         <NavbarLinks
           className='hidden xl:flex'
