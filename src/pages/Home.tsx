@@ -15,13 +15,16 @@ const Home: FC = () => {
             New Arrivals
           </h1>
           <div className='text-xs flex flex-wrap xl:gap-2 gap-4 gap-y-6 xl:gap-y-1 xl:justify-center justify-evenly'>
-            {products.map(({ image, label, price, ratings }) => (
+            {products.map(({ id, image, label, price, ratings, description }) => (
               <>
                 <ProductsCard
+                  key={id}
+                  id={id}
                   image={image}
                   label={label}
                   price={price}
                   ratings={ratings}
+                  description={description}
                 />
               </>
               ))}
