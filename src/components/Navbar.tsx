@@ -47,21 +47,27 @@ const Navbar: FC = () => {
         </div>
       </nav>
       <nav className='xl:h-12 h-14 text-xs xl:text-sm flex items-center xl:w-container border-t-[1px] xl:border-none border-neutral-200 xl:justify-between justify-center uppercase w-full bg-neutral-100 xl:bg-white'>
-        <div className={`xl:flex flex-col xl:flex-row gap-6 xl:items-center pl-20 pt-20 xl:pt-0 xl:pl-0 xl:justify-between bg-white xl:bg-transparent w-full xl:w-auto fixed xl:static top-0 left-0 min-h-full ${ isMenuOpen ? 'flex' : 'hidden' }`}>
+        <div
+          className={`xl:flex flex-col xl:flex-row gap-6 xl:items-center pl-20 pt-20 xl:pt-0 xl:pl-0 xl:justify-between bg-white xl:bg-transparent w-full xl:w-auto fixed xl:static top-0 left-0 min-h-full ${
+            isMenuOpen ? "flex" : "hidden"
+          }`}
+        >
           {navbarDropDownItems.map(({ label, to, subLabel }) => (
             <Dropdown title={label} to={to} subLabel={subLabel} />
           ))}
         </div>
-        {
-          isMenuOpen &&
-          <X strokeWidth={2.25} className='z-50 absolute top-10 right-10'
-          onClick={() => setMenuOpen(!isMenuOpen)}
+        {isMenuOpen && (
+          <X
+            strokeWidth={2.25}
+            className='z-50 absolute top-10 right-10'
+            onClick={() => setMenuOpen(!isMenuOpen)}
           />
-        }
+        )}
         <div className='xl:hidden flex w-[50%] xl:w-auto justify-around'>
-          <div 
-          onClick={() => setMenuOpen(!isMenuOpen)}
-          className='flex flex-col items-center xl:hidden gap-1'>
+          <div
+            onClick={() => setMenuOpen(!isMenuOpen)}
+            className='flex flex-col items-center xl:hidden gap-1'
+          >
             <Menu size={20} />
             <p>Menu</p>
           </div>

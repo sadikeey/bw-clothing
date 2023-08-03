@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Lato', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
       },
       width: {
         'container': '62%',
