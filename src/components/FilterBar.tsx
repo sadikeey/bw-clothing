@@ -12,7 +12,7 @@ const FilterBarItems: FC<IFilterBarItems> = ({ label, items }) => {
       <h3 className='font-normal'>{label}</h3>
       <ul className='capitalize flex flex-col gap-2'>
         {items.map((item) => (
-          <li className='flex gap-2'>
+          <li key={item} className='flex gap-2'>
             <input type='checkbox' value={item} />
             <span>{item}</span>
           </li>

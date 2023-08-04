@@ -38,11 +38,11 @@ const Dropdown: FC<IDropdownProps> = ({ title, to, subLabel }) => {
         }`}
       >
         {subLabel.slice(0, 2).map(({ name, items }) => (
-          <div className='flex flex-col gap-4'>
+          <div key={name} className='flex flex-col gap-4'>
             <h4 className='font-bold text-sm text-black'>{name}</h4>
             <ul className='flex flex-col gap-4'>
               {items.map(({ to, label }) => (
-                <li>
+                <li key={to}>
                   <Link to={to}>{label}</Link>
                 </li>
               ))}
@@ -52,7 +52,7 @@ const Dropdown: FC<IDropdownProps> = ({ title, to, subLabel }) => {
         <div>
           <ul className='flex gap-7 underline'>
             {subLabel[2].items.map(({ to, label, imageLink }) => (
-              <li>
+              <li key={to}>
                 <Link className='flex flex-col gap-4 items-center' to={to}>
                   <img className='w-60' src={imageLink} alt='model-pic' />
                   {label}

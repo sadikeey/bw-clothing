@@ -53,7 +53,7 @@ const Navbar: FC = () => {
           }`}
         >
           {navbarDropDownItems.map(({ label, to, subLabel }) => (
-            <Dropdown title={label} to={to} subLabel={subLabel} />
+            <Dropdown key={label} title={label} to={to} subLabel={subLabel} />
           ))}
         </div>
         {isMenuOpen && (
