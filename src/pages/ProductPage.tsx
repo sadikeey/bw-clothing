@@ -6,9 +6,14 @@ import { add } from "../redux/cartSlice"
 
 const ProductPage: FC = () => {
   const dispatch = useDispatch()
-  const { image, label, price, description } = useSelector(
-    (state: RootState) => state.item
-  )
+  // let { image, label, price, description } = useSelector(
+  //   (state: RootState) => state.item
+  // )
+  const item = useSelector((state: RootState) => state.item)
+  const { label, price, description } = item
+  let { image } = item
+  image = `/public/${image}`
+
 
   const handleAddToCart = () => {
     dispatch(add({ image, label, price, description }))
