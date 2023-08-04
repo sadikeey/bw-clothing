@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 import { Shirt, Search, ShoppingCart, Menu, MapPin, X } from "lucide-react"
 import Dropdown from "./ui/Dropdown"
 import navbarDropDownItems from "../data/navbarDropDownItems"
+import { useSelector } from "react-redux"
+import { RootState } from "../redux/store"
 
 export const NavbarLinks: FC<INavbarLinksProps> = ({
   title,
@@ -25,6 +27,7 @@ export const NavbarLinks: FC<INavbarLinksProps> = ({
 
 const Navbar: FC = () => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false)
+  const item = useSelector((state: RootState) => state.cart)
 
   return (
     <header className='flex flex-col items-center justify-center border-b-[1px] border-[#DDDDDD] bg-white'>
@@ -79,13 +82,18 @@ const Navbar: FC = () => {
         <div className='flex items-center w-[50%] xl:w-auto justify-around xl:gap-6'>
           <div className='flex flex-col xl:flex-row items-center gap-1 xl:gap-2'>
             <Search size={16} className='hidden xl:block' />
-            <Search size={20} className='xl:hidden' />
+            <Search size={18} className='xl:hidden' />
             <p>SEARCH</p>
           </div>
-          <div className='flex flex-col xl:flex-row items-center gap-1'>
-            <ShoppingCart size={20} />
+          <Link to='/cart' className='flex flex-col xl:flex-row items-center gap-1 relative'>
+            <ShoppingCart className='hidden xl:block' size={20} />
+            {item.length <= 0 ? (
+              <ShoppingCart className='xl:hidden' size={20} />
+            ) : (
+              <p>{item.length}</p>
+            )}
             <p className='xl:hidden'>CART</p>
-          </div>
+          </Link>
         </div>
       </nav>
     </header>

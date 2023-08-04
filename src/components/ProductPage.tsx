@@ -2,16 +2,16 @@ import { FC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../redux/store"
 import { ShoppingBag } from "lucide-react"
-import { add } from '../redux/cartSlice'
+import { add } from "../redux/cartSlice"
 
 const ProductPage: FC = () => {
   const dispatch = useDispatch()
   const { image, label, price, description } = useSelector(
     (state: RootState) => state.item
   )
-  
+
   const handleAddToCart = () => {
-    dispatch(add({image, label, price, description }))
+    dispatch(add({ image, label, price, description }))
   }
 
   return (
@@ -26,15 +26,19 @@ const ProductPage: FC = () => {
             <p>$ {price}</p>
             <p className='font-light text-sm xl:text-base'>{description}</p>
           </div>
-          <div className='hidden xl:flex bg-neutral-700 text-white h-14 justify-center items-center gap-3 hover:bg-neutral-800'>
+          <button
+            onClick={handleAddToCart}
+            className='hidden xl:flex bg-neutral-700 text-white h-14 justify-center items-center gap-3 hover:bg-neutral-800'
+          >
             <ShoppingBag size={17} />
             <p>Add to Bag</p>
-          </div>
+          </button>
         </div>
       </div>
       <button
         onClick={handleAddToCart}
-       className='xl:hidden fixed w-full h-14 bottom-0 bg-neutral-700 text-white text-center flex gap-3 justify-center items-center hover:bg-neutral-800'>
+        className='xl:hidden fixed w-full h-14 bottom-0 bg-neutral-700 text-white text-center flex gap-3 justify-center items-center hover:bg-neutral-800'
+      >
         <ShoppingBag size={17} />
         <p>Add to Bag</p>
       </button>
