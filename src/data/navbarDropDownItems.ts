@@ -85,12 +85,12 @@ const navbarDropDownItems: INavbarDropDownItems[] = [
           {
             label: "New Lookbook",
             to: "store#new-lookbook",
-            imageLink: "assets/images/navbar/girl1.webp",
+            imageLink: "/public/assets/images/navbar/girl1.webp",
           },
           {
             label: "Utility Lookbook",
             to: "store#utility-lookbook",
-            imageLink: "assets/images/navbar/girl2.webp",
+            imageLink: "/public/assets/images/navbar/girl2.webp",
           },
         ],
       },

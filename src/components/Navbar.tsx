@@ -51,7 +51,7 @@ const Navbar: FC = () => {
       </nav>
       <nav className='xl:h-12 h-14 text-xs xl:text-sm flex items-center xl:w-container border-t-[1px] xl:border-none border-neutral-200 xl:justify-between justify-center uppercase w-full bg-neutral-100 xl:bg-white'>
         <div
-          className={`xl:flex flex-col xl:flex-row gap-6 xl:items-center pl-20 pt-20 xl:pt-0 xl:pl-0 xl:justify-between bg-white xl:bg-transparent w-full xl:w-auto fixed xl:static top-0 left-0 min-h-full ${
+          className={`xl:flex flex-col xl:flex-row gap-6 xl:items-center pl-20 pt-20 xl:pt-0 xl:pl-0 xl:justify-between bg-white xl:bg-transparent w-full xl:w-auto fixed xl:static top-0 left-0 min-h-full z-50 ${
             isMenuOpen ? "flex" : "hidden"
           }`}
         >
